@@ -1,0 +1,33 @@
+input{
+  color: $grayishViolet;
+  font-family: inherit;
+  font-size: 1em;
+  margin-bottom: 16px;
+  &::placeholder {
+    color: inherit;
+    font: inherit;
+  }
+}
+
+input.invalid {
+  color: $red;
+  border: 2px solid $red;
+  margin-bottom: 0;
+  & ~ .invalid-message {
+    color: $red;
+    font-size: .7em;
+    font-style: italic;
+    text-align: left;
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    @include mQ($lg) {
+      position: absolute;
+      bottom: -20px;
+      font-size: .8em;
+    }
+  }
+  &::placeholder {
+    color: hsla(0, 87%, 67%, 80%);
+  }
+}

@@ -1,0 +1,24 @@
+.started {
+  background: $darkViolet url('../img/bg-boost-mobile.svg') no-repeat;
+  padding-top: 110px;
+  padding-bottom: 90px;
+  @include mQ($md) {
+    background-image: url('../img/bg-boost-desktop.svg');
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  h2 {
+    color: white;
+    margin-bottom: 20px;
+    @include mQ($lg) {
+      margin-bottom: 40px;
+    }
+  }
+  .button {
+    width: 186px;
+    height: 56px;
+    line-height: 56px;
+    margin: auto;
+  }
+}

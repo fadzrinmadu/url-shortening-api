@@ -1,0 +1,73 @@
+.intro {
+  overflow: hidden;
+  padding-bottom: 168px;
+  @include mQ($lg) {
+    margin-top: 80px;
+  }
+  .content-image {
+    @include mQ($lg) {
+      grid-column: 2/3;
+      grid-row: 1;
+    }
+  }
+  .illustration {
+    width: 133.333vw;
+    @include mQ($lg) {
+      width: initial;
+      transform: translateX(160px);
+    }
+  }
+  .content {
+    margin-top: 50px;
+    @include mQ($lg) {
+      width: auto;
+      grid-column: 1/2;
+      grid-row: 1;
+      margin-top: 0;
+    }
+  }
+  .button {
+    width: 200px;
+    height: 55px;
+    line-height: 55px;
+    margin: auto;
+    @include mQ($lg) {
+      margin-left: 0;
+    }
+  }
+}
+
+.shorten-results {
+  background: #f0f1f6;
+  padding-top: 100px;
+}
+
+section.features {
+  background: #f0f1f6;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  .feature-list {
+    margin-top: 96px;
+    position: relative;
+    &::after {
+      @include lineCard;
+    }
+    @include mQ($lg) {
+      display: flex;
+      text-align: left;
+      &::after {
+        transform: rotateZ(90deg);
+      }
+    }
+  }
+  .feature-list .card:nth-child(2) {
+    @include mQ($lg) {
+      margin-top: 80px;
+    }
+  }
+  .feature-list .card:nth-child(3) {
+    @include mQ($lg) {
+      margin-top: 160px;
+    }
+  }
+}

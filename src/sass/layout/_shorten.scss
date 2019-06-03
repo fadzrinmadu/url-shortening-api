@@ -1,0 +1,96 @@
+.shorten {
+  position: absolute;
+  right: 6.933vw;
+  left: 6.933vw;
+  background: $darkViolet url('../img/bg-shorten-mobile.svg') no-repeat;
+  background-position: right top;
+  border-radius: 8px;
+  transform: translateY(-50%);
+  @include mQ($md) {
+    padding: 30px;
+    background-image: url('../img/bg-shorten-desktop.svg');
+    background-size: cover;
+  }
+  form {
+    padding: 24px;
+    position: relative;
+    @include mQ($lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  input, 
+  button {
+    height: 50px;
+    border-radius: 8px;
+    @include mQ($lg) {
+      height: 64px;
+    }
+  }
+  input {
+    @include mQ($lg) {
+      width: 80%;
+      margin-bottom: 0;
+    }
+  }
+  .button {
+    width: 100%;
+    line-height: 50px;
+    @include mQ($lg) {
+      width: 18%;
+    }
+  }
+}
+
+.shorten-results .card {
+  background: white;
+  margin-top: 20px;
+  border-radius: 8px;
+  @include mQ($lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .card-header,
+  .card-body {
+    padding: 14px;
+  }
+  .card-header {
+    border-bottom: 1px solid #e5e5e5;
+    @include mQ($lg) {
+      border-bottom: none;
+    }
+  }
+  p {
+    margin: 0;
+    text-align: left;
+    font-size: 1rem;
+    @include mQ($lg) {
+      font-size: 1.1rem;
+      color: $veryDarkBlue;
+    }
+  }
+  .card-body {
+    @include mQ($lg) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .card-body p {
+    color: $cyan;
+    margin-bottom: 14px;
+    @include mQ($lg) {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  }
+  .button {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .button.copied {
+    color: white;
+    background: $darkViolet;
+  }
+}

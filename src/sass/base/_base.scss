@@ -1,0 +1,36 @@
+.container {
+  padding: 0 6.933vw;
+}
+
+.grid {
+  @include mQ($lg) {
+    display: grid;
+    grid-template-columns: 46% 44%;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.illustration {
+  width: 100%;
+}
+
+p,
+.leading,
+.intro .leading {
+  margin: 20px auto 30px;
+}
+
+main {
+  position: relative;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  min-height: 50px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}

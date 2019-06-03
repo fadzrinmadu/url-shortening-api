@@ -1,0 +1,24 @@
+// 1 - ABSTRACTS
+@import 'abstracts/_variables.scss';
+@import 'abstracts/_mixins.scss';
+
+// 2 - BASE
+@import 'base/_reset.scss';
+@import 'base/_base.scss';
+@import 'base/_typography.scss';
+
+// 3 - COMPONENTS
+@import 'components/_buttons.scss';
+@import 'components/_cards.scss';
+@import 'components/_socialMedia.scss';
+@import 'components/_forms.scss';
+
+// 4 - LAYOUT
+@import 'layout/_header.scss';
+@import 'layout/_shorten.scss';
+@import 'layout/_started.scss';
+@import 'layout/_footer.scss';
+@import 'layout/_attribution.scss';
+
+// 5 - PAGES
+@import 'pages/_home.scss';

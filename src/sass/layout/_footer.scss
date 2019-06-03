@@ -1,0 +1,44 @@
+footer.container {
+  background: $veryDarkViolet;
+  padding-top: 54px;
+  padding-bottom: 54px;
+  @include mQ($lg) {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .logo {
+    filter: grayscale(1) brightness(0) invert(1);
+  }
+}
+
+.info {
+  margin-top: 40px;
+  @include mQ($lg) {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+    a, i {
+      &:hover {
+        color: $cyan;
+      }
+    }
+  }
+  div {
+    margin-bottom: 30px;
+    @include mQ($lg) {
+      margin-bottom: 0;
+    }
+  }
+  h4 {
+    margin-bottom: 28px;
+    @include mQ($lg) {
+      margin-bottom: 20px;
+    }
+  }
+  li {
+    padding: 10px 0;
+  }
+}

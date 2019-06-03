@@ -1,0 +1,90 @@
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  position: relative;
+  margin: 40px auto 30px;
+  @include mQ($lg) {
+    margin-top: 50px;
+  }
+  a {
+    align-self: center;
+  }
+}
+
+.menu-toggle {
+  @include mQ($lg) {
+    display: none;
+  }
+}
+
+.menu-container {
+  background: $darkViolet;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: .3s ease;
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+}
+
+.menu-container.active {
+  transform: scaleY(1);
+  .nav-list {
+    margin: 40px 24px;
+  }
+  ul:first-child {
+    border-bottom: 1px solid #544a6d;
+  }
+  li {
+    margin: 36px auto;
+  }
+  .button {
+    height: 48px;
+    line-height: 48px;
+  }
+}
+
+.menu-container,
+.menu-container.active {
+  @include mQ($lg) {
+    background: white;
+    transform: scaleY(1);
+    border-radius: none;
+    position: initial;
+  }
+  .nav-list {
+    @include mQ($lg) {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 45px;
+      li:hover {
+        a {color: $veryDarkBlue;}
+        .button {color: white;}
+      }
+    }
+  }
+  ul {
+    @include mQ($lg) {
+      display: flex;
+    }
+  }
+  li {
+    @include mQ($lg) {
+      align-self: center;
+      margin-right: 37px;
+    }
+  }
+  .button {
+    @include mQ($lg) {
+      color: white;
+      width: 103px;
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+}
